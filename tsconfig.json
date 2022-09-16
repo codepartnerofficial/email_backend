@@ -1,0 +1,15 @@
+{
+        "compilerOptions": {
+            "module": "CommonJS",
+            "noImplicitAny": true,
+            "removeComments": true,
+            "preserveConstEnums": true,
+            "declaration": true,
+            // "outFile": "dist/index.js",
+            "outDir": "dist",
+            "sourceMap": true,
+            "moduleResolution": "node"
+        },
+        "include": ["src/**/*"],
+        "exclude": ["node_modules", "**/*.spec.ts", "**/*.js"]
+    }

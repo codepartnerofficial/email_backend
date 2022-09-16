@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify your Mail</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0eeff;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .container {
+            /* background-color: #171429; */
+            background-color: white;
+            width: 100%;
+            max-width: 700px;
+            margin: 30px auto;
+            /* padding: 50px 20px; */
+            /* margin; */
+            border-collapse: collapse;
+        }
+
+        table,
+        td,
+        tr {
+            border: 1px solid white;
+        }
+
+        table {
+            border-bottom: 4px solid #171429;
+        }
+
+        .title {
+            text-align: left;
+            font-weight: bold;
+            font-size: 30px;
+            padding: 50px 0 20px 20px;
+        }
+
+        .branding {
+            padding: 50px 20px 20px 0;
+            /* padding: 50px 20px; */
+            text-align: right;
+        }
+
+        .social-links {
+            padding: 30px 0 30px 0;
+            text-align: center;
+            width: calc(100%/4);
+            /* filter: invert(1); */
+        }
+
+        .logo {
+            cursor: pointer;
+        }
+
+        .primary-button {
+            padding: 10px 40px;
+            border: none;
+            background-color: #201c3b;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table class="container" border="collapse">
+        <tbody>
+            <tr>
+                <td colspan="2" class="title">Verify your mail</td>
+                <td colspan="2" class="branding">
+                    <a href="<%= domain %>">
+                        <img src="<%= host %>/images/logo.png" alt="Logo" height="70" alt="logo" />
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="padding:0 20px">
+                    <p>Thank you for registering on our platform. You're almost ready to start. Simply
+                        click the button below to confirm your email address and active your account.</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center; padding: 10px 20px">
+                    <a href="<%= domain %>/verify/<%= slug %>" target="_blank">
+                        <button class="primary-button">Confirm Email Address</button>
+                    </a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <p class="container" style="border:none;background-color:transparent; box-sizing: border-box; text-align: left;">
+        If you’re having trouble clicking the "Confirm Email Address" button, copy and paste the URL below into your web
+        browser:
+        <%= domain %>/verify-mail/<%= slug %>
+    </p>
+</body>
+</html>
